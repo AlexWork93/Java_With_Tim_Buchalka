@@ -6,13 +6,32 @@ public class Main {
         EnhancedSwitch enhancedSwitch = new EnhancedSwitch();
 
         traditionalSwitch.sayHi();
-        traditionalSwitch.switchOptionFromNatoAlphabet("abie");
-        traditionalSwitch.switchOptionFromNatoAlphabet("EASY");
-        traditionalSwitch.switchOptionFromNatoAlphabet("BlaBla");
+        traditionalSwitch.fromCodeToLetter("abie");
+        traditionalSwitch.fromCodeToLetter("EASY");
+        traditionalSwitch.fromCodeToLetter("BlaBla");
+        traditionalSwitch.fromLetterToCode("c");
+        traditionalSwitch.fromLetterToCode("D");
+        traditionalSwitch.fromLetterToCode("g");
+        traditionalSwitch.dayOfTheWeek(1);
+        traditionalSwitch.dayOfTheWeek(2);
+        traditionalSwitch.dayOfTheWeek("tuesday");
+        traditionalSwitch.dayOfTheWeek("WedNesDay");
+        traditionalSwitch.dayOfTheWeek("1");
+        traditionalSwitch.printSeparateLine();
 
         enhancedSwitch.sayHi();
-        enhancedSwitch.switchOptionFromNatoAlphabet("abie");
-        enhancedSwitch.switchOptionFromNatoAlphabet("EASY");
-        enhancedSwitch.switchOptionFromNatoAlphabet("BlaBla");
+        enhancedSwitch.fromCodeToLetter("abie");
+        enhancedSwitch.fromCodeToLetter("EASY");
+        enhancedSwitch.fromCodeToLetter("BlaBla");
+        enhancedSwitch.fromLetterToCode("c");
+        enhancedSwitch.fromLetterToCode("D");
+        enhancedSwitch.fromLetterToCode("g");
+        enhancedSwitch.dayOfTheWeek(1);
+        enhancedSwitch.dayOfTheWeek(2);
+        enhancedSwitch.dayOfTheWeek("tuesday");
+        enhancedSwitch.dayOfTheWeek("WedNesDay");
+        enhancedSwitch.dayOfTheWeek("1");
+        enhancedSwitch.printSeparateLine();
+
     }
 }

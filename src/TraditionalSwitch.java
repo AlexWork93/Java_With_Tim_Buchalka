@@ -7,7 +7,7 @@ public class TraditionalSwitch extends SwitchConstruction implements SwitchOptio
     }
 
     @Override
-    public void switchOptionFromNatoAlphabet(String value) {
+    public void fromCodeToLetter(String value) {
         value = value.toLowerCase();
         String match;
         switch (value){
@@ -30,5 +30,67 @@ public class TraditionalSwitch extends SwitchConstruction implements SwitchOptio
                 match = "some another letter";
         }
         printResult(createOutputMessage(value, match));
+    }
+
+    @Override
+    public void fromLetterToCode(String value) {
+        value = value.toLowerCase();
+        String match;
+        switch (value){
+            case "a":
+                match = "abie";
+                break;
+            case "b":
+                match = "baker";
+                break;
+            case "c":
+                match = "charlie";
+                break;
+            case "d":
+                match = "dog";
+                break;
+            case "e":
+                match = "easy";
+                break;
+            default:
+                match = "some another code";
+        }
+        printResult(createOutputMessage(value, match));
+    }
+
+    @Override
+    public void dayOfTheWeek(int dayNumber) {
+        String match;
+        switch (dayNumber){
+            case 1:
+                match = "monday";
+                break;
+            case 2:
+                match = "tuesday";
+                break;
+            case 3:
+                match = "wednesday";
+                break;
+            case 4:
+                match = "thursday";
+                break;
+            case 5:
+                match = "friday";
+                break;
+            case 6:
+                match = "saturday";
+                break;
+            case 7:
+                match = "sunday";
+                break;
+            default:
+                match = "some another day";
+        }
+        printResult(createOutputMessage(String.valueOf(dayNumber), match));
+    }
+
+    @Override
+    public void dayOfTheWeek(String dayName) {
+        printResult("to convert from name to day number use enhanced switch");
     }
 }
