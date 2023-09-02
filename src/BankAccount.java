@@ -5,10 +5,18 @@ public class BankAccount extends AbstractBankAccount implements AccountOperation
         super(accountNumber, accountBalance, accountName, phoneName);
     }
 
+    public BankAccount(int accountNumber, String accountName, String phoneName) {
+        super(accountNumber, accountName, phoneName);
+    }
+
+    public BankAccount() {
+        super();
+    }
+
 
     @Override
     public boolean withdrawFunds(double amountToWithdraw) {
-        System.out.println("Withdraw: $" + amountToWithdraw);
+        System.out.println("===============================\nWithdraw: $" + amountToWithdraw);
         if (this.getAccountBalance() < amountToWithdraw ){
             System.out.println("Insufficient balance");
             printCurrentBalance();
@@ -24,7 +32,7 @@ public class BankAccount extends AbstractBankAccount implements AccountOperation
 
     @Override
     public boolean depositFunds(double amountToDeposit) {
-        System.out.println("Deposit: $" + amountToDeposit);
+        System.out.println("===============================\nDeposit: $" + amountToDeposit);
         if (amountToDeposit < 0){
             System.out.println("incorrect amount");
             return false;

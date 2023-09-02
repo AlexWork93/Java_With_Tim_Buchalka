@@ -4,11 +4,21 @@ public abstract class AbstractBankAccount {
     private String accountName;
     private String phoneName;
 
+
+
     public AbstractBankAccount(int accountNumber, double accountBalance, String accountName, String phoneName) {
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
         this.accountName = accountName;
         this.phoneName = phoneName;
+    }
+
+    public AbstractBankAccount() {
+        this(0, 0, "default","default");
+    }
+
+    public AbstractBankAccount(int accountNumber, String accountName, String phoneName) {
+        this(accountNumber, 0, accountName,phoneName);
     }
 
     public int getAccountNumber() {
@@ -44,7 +54,8 @@ public abstract class AbstractBankAccount {
     }
     @Override
     public String toString(){
-        return "Number: " + accountNumber + "\n" +
+        return "================================\n" +
+                "Number: " + accountNumber + "\n" +
                 "Name: " + accountName + "\n" +
                 "Balance: " + accountBalance + "\n" +
                 "Phone: " + phoneName;
